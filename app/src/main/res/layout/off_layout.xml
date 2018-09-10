@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/off_button_layout">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:id="@+id/frame_off"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300sp">
+
+        <ImageView
+            android:id="@+id/base_image"
+            android:layout_width="wrap_content"
+            android:layout_height="150sp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/switch_panel_when_off" />
+
+        <ImageView
+            android:id="@+id/white_light"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="34dp"
+            android:src="@mipmap/white_flash_button" />
+
+        <ImageView
+            android:id="@+id/off_image"
+            android:layout_width="150sp"
+            android:layout_height="100sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="14dp"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/flash_main_off" />
+
+        <ImageView
+            android:id="@+id/blink_light"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/white_light"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="44dp"
+            android:src="@mipmap/blinking_button" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/frame_on"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300sp">
+
+        <ImageView
+            android:id="@+id/base_image_on"
+            android:layout_width="wrap_content"
+            android:layout_height="150sp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/switch_panel_when_on" />
+
+        <ImageView
+            android:id="@+id/white_light_on"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="34dp"
+            android:src="@mipmap/white_flash_button" />
+
+        <ImageView
+            android:id="@+id/off_image_on"
+            android:layout_width="150sp"
+            android:layout_height="100sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="14dp"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/flash_main_on" />
+
+        <ImageView
+            android:id="@+id/blink_light_on"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/white_light_on"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="44dp"
+            android:src="@mipmap/blinking_button" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/exit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="470sp"
+        android:text="@string/exit_txt"/>
+</RelativeLayout>
