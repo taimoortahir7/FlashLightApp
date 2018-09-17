@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.example.tamoor.flashlightapp"
+        applicationId "com.example.tamoor.DarkLight"
         minSdkVersion 18
         targetSdkVersion 27
         versionCode 1

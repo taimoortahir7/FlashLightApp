@@ -1,4 +1,4 @@
-package com.example.tamoor.flashlightapp;
+package com.example.tamoor.DarkLight;
 
 public class ImageModel {
     private int image;

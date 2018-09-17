@@ -1,4 +1,4 @@
-package com.example.tamoor.flashlightapp;
+package com.example.tamoor.DarkLight;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,18 +6,26 @@ import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class WhiteLightActivity extends AppCompatActivity {
-    private static float bright = 0;
-    public static final int REQUEST_CODE = 1;
-    private static int brightness_value = 0;
+import pl.droidsonroids.gif.GifImageView;
+
+public class ImageActivity extends AppCompatActivity {
+
     Context context;
+    GifImageView imageView;
+    int gifDrawableResource;
+    private static int brightness_value = 0;
+    private static float bright = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_image);
+
         context = getBaseContext();
-        setContentView(R.layout.activity_white_light);
         setBrightness(255);
+        gifDrawableResource = getIntent().getIntExtra("image", 0);
+        initialization();
+        setImage();
     }
 
     public void setBrightness(int brightness){
@@ -50,12 +58,20 @@ public class WhiteLightActivity extends AppCompatActivity {
     }
 
     private void getPreviousBrightness() {
-            try {
-                brightness_value = Settings.System.getInt(getContentResolver(),
-                        Settings.System.SCREEN_BRIGHTNESS);
-            } catch (Settings.SettingNotFoundException e) {
-                e.printStackTrace();
-            }
+        try {
+            brightness_value = Settings.System.getInt(getContentResolver(),
+                    Settings.System.SCREEN_BRIGHTNESS);
+        } catch (Settings.SettingNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void initialization() {
+        imageView = findViewById(R.id.image_view_item);
+    }
+
+    private void setImage() {
+        imageView.setImageResource(gifDrawableResource);
     }
 
     @Override
@@ -71,5 +87,4 @@ public class WhiteLightActivity extends AppCompatActivity {
         }
 
     }
-
 }

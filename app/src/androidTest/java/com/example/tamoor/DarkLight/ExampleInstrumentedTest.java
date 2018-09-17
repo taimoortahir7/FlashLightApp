@@ -1,4 +1,4 @@
-package com.example.tamoor.flashlightapp;
+package com.example.tamoor.DarkLight;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.tamoor.flashlightapp", appContext.getPackageName());
+        assertEquals("com.example.tamoor.DarkLight", appContext.getPackageName());
     }
 }

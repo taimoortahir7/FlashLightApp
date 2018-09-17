@@ -1,4 +1,4 @@
-package com.example.tamoor.flashlightapp;
+package com.example.tamoor.DarkLight;
 
 import android.content.Context;
 import android.content.Intent;
